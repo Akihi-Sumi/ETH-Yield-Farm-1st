@@ -23,6 +23,7 @@ contract DappToken {
     
     // Solidityマッピングを使用して、トークンを所有する各アカウントの残高を保存
     mapping(address => uint256) public balanceOf;
+    // address1=owner address2=spender uint256=spenderが引き出せる金額(_vaule)
     mapping(address => mapping(address => uint256)) public allowance;
 
     constructor() public {
